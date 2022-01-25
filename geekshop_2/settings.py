@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    'social_django',
+
     'adminapp',
     'authapp',
     'basketapp',
@@ -152,3 +154,11 @@ EMAIL_USE_SSL = False
 
 EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
 EMAIL_FILE_PATH = 'tmp/'
+
+AUTHENTICATIONS_BACKENDS = (
+    'django.contrib.auth.backends.ModelBackend',
+    'social_core.backends.vk.VKOAuth2',
+)
+
+SOCIAL_AUTH_VK_OAUTH2_KEY = '8042817'
+SOCIAL_AUTH_VK_OAUTH2_SECRET = 'fDa0UEFUIYMgyHXAMnGF'
